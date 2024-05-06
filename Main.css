@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+html,body{
+    font-family: 'Rubik', sans-serif;
+}
+.Main_page{
+    width: 100%;
+    height: 100vh;
+}
+.nav-item a{
+    font-size: .9rem;
+    font-weight: 500;
+    color:rgb(77, 77, 77);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.nav-item a:hover{
+    color:hsl(359, 69%, 60%);
+}
+.Landing{
+height: 90vh;
+}
+.lefttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chrome{
+    background-color:hsl(231, 69%, 60%);
+    color: white;
+}
+.chrome:hover{
+    border:1px solid hsl(231, 69%, 60%);
+    color:hsl(231, 69%, 60%);
+}
+.Login:hover{
+    border:1px solid hsl(359, 69%, 60%);
+    background: white;
+    color:hsl(359, 69%, 60%);
+}
+.firefox:hover{
+    background: white;
+    border:1px solid gray;
+    color: gray;
+}
+.feature-link{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+}
+.active{
+    color:hsl(359, 69%, 60%) ;
+}
+.feature-link:active{
+    color:hsl(359, 69%, 60%) ;
+}
+.feature-link:hover{
+    color:hsl(359, 69%, 60%)
+}
+.feature-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: hsl(359, 69%, 60%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+.feature-link.active::after {
+    background: hsl(359, 69%, 60%); /* Matches the underline color with the text */
+    transform: scaleX(1); /* Always show the underline for active links */
+    transform-origin: left;
+}
+.feature-link:hover:after {
+    background: hsl(359, 69%, 60%); /* Matches the underline color with the text */
+    transform: scaleX(1); /* Always show the underline for active links */
+    transform-origin: left;
+}
+.feature-link:not(.active){
+    color: gray;
+}
+.feature-link:hover:not(.active){
+    color: hsl(359, 69%, 60%) ;
+}
+.More-info{
+    width: 10rem;
+    background-color:hsl(231, 69%, 60%);
+    color: white;
+}
+.More-info:hover{
+    border: 1px solid hsl(231, 69%, 60%);
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background: gray;
+    opacity: .3;
+}
+.card-btns{
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+}
+.Chrome{
+    height: 100vh;
+}
+@media (min-width:750px){
+    .ForCards{
+        height: 80vh;
+    }
+    .contactus{
+        width: 75%;
+    }
+}
+.footer{
+    background: hsl(231, 69%, 60%);
+}
+.tp{
+    letter-spacing: .2rem;
+}
+@media (max-width:750px){
+    .contactus{
+        width: 100%;
+    }
+}
+.lastnav{
+    background: hsl(229, 31%, 21%);
+    color: white;
+    
+}
+.link{
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+}
+.mdcol{
+    position: relative;
+}
+.mdcol::after{
+    content: '';
+    width: 120%;
+    height: 80%;
+    background: hsl(231, 69%, 60%);
+    border-top-right-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-40%);
+    z-index: -1;
+}
+@media (min-width:750px){
+    .mdcol{
+        height: 23rem;
+       
+    }
+}
+@media (max-width:750px){
+    .mdcol{
+        height: 24rem;
+    }
+}
+@media (max-width:410px){
+    .mdcol{
+        height: 18rem;
+    }
+}
+@media (min-width:777px) and (max-width:990px){
+    .mdcol::after{
+        content: '';
+        width: 120%;
+        height: 50%;
+        background: hsl(231, 69%, 60%);
+        border-top-right-radius: 15rem;
+        border-bottom-right-radius: 15rem;
+        position: absolute;
+        left: 0;
+        top: 15%;
+        transform: translateX(-40%);
+        z-index: -1;
+    }
+
+}
